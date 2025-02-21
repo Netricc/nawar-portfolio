@@ -1,18 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { socialMediaLinks } from "@/lib/constants/";
 
 const Footer = () => {
   return (
     <footer className="bg-secondary w-full min-h-screen">
       <div className="w-full h-full  text-third pt-[80px] max-lg:pt-[34px] relative">
         <div className="container-max w-full">
-          <h2 className="text-[68px] text-third font-semibold font-dm-sans">
+          <h2 className="text-[68px] max-sm:text-[42px] text-third font-semibold font-dm-sans">
             Let&apos;s work <br /> Together
           </h2>
 
           <div className="hr w-full h-[2px] bg-gray mt-[40px]"></div>
-          <div className="w-full flex justify-between items-center gap-[50px] flex-wrap max-sm:pt-[40px]">
+          <div className="w-full flex justify-between items-center gap-[50px] flex-wrap max-sm:pt-[40px] max-sm:justify-center">
             <button className="py-[15px] px-[26px] text-third border-2 border-third text-[20px] font-inter font-medium rounded-[38px]  hover:border-primary duration-200">
               <Link href={"mailto:nawabsn911@gmail.com"}>
                 nawabsn911@gmail.com
@@ -27,7 +28,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="loop relative w-full mt-[100px] max-lg:mt-[230px] max-sm:mt-[180px]">
+        <div className="loop relative w-full mt-[100px] max-lg:mt-[100px] max-sm:mt-[80px]">
           <h2
             className={`absolute 
               font-dm-sans text-left left-[100%]
@@ -38,7 +39,26 @@ const Footer = () => {
           </h2>
         </div>
 
-        <div></div>
+        <div className="w-full max-md:flex-col max-md:gap-[60px] py-[40px] container-max flex justify-between items-center">
+          <p className="font-inter text-lg font-medium text-third">
+            {new Date().getFullYear()} © Edition
+          </p>
+
+          <div className="flex items-center gap-[52px] max-lg:gap-[38px] max-lg:text-base max-sm:gap-[20px]">
+            {socialMediaLinks.map((socialLink) => {
+              return (
+                <Link
+                  className="text-lg text-third font-medium font-inter hover:text-primary duration-200 "
+                  href={socialLink.href}
+                  target="_blank"
+                  key={socialLink.href}
+                >
+                  {socialLink.title}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </footer>
   );
