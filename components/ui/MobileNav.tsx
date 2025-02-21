@@ -11,8 +11,10 @@ import { starIcon } from "@/assets/icons";
 const MobileNav = () => {
   const context = useContext(AppContext);
   const asideRef = useRef<HTMLDivElement>(null);
-  const [scrollY, setScrollY] = useState(() => window.scrollY);
-  const [windowWidth, setWindowWidth] = useState(() => window.innerWidth);
+
+  // Set initial state with safe defaults
+  const [scrollY, setScrollY] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   if (!context) {
     throw new Error("MobileMenu must be used within an AppProvider");
@@ -20,16 +22,21 @@ const MobileNav = () => {
 
   const { showMobileNav, setShowMobileNav } = context;
 
+  // Only update state once the component is mounted (client-side)
   useEffect(() => {
+    setScrollY(window.scrollY);
+    setWindowWidth(window.innerWidth);
+
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
-  useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useEffect(() => {
