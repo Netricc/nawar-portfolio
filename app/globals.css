@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Design System */
+
+:root {
+  --primary-color: #1a50da;
+  --secondary-color: #1c1c1c;
+  --third-color: #ffffff;
+  --gray-color: #848484;
+}
+
+.font-inter {
+  font-family: "Inter", serif;
+}
+
+.font-dm-sans {
+  font-family: "DM Sans", sans-serif;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-third {
+  color: var(--third-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-third {
+  background-color: var(--third-color);
+}
+
+/* Grid System */
+
+.container-max {
+  @apply max-w-[1040px] mx-auto max-md:px-[36px] max-sm:px-[26px] max-xl:px-[60px] max-lg:px-[46px];
+}
+
+/* General Style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--third-color);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes slide-left {
+  to {
+    left: -320%;
+  }
+}
+
+@media (max-width: 1100px) {
+  @keyframes slide-left {
+    to {
+      left: -400%;
+    }
+  }
+}
+
+@media (max-width: 608px) {
+  @keyframes slide-left {
+    to {
+      left: -900%;
+    }
+  }
+}
+
+.loop {
+  height: 200px;
+  overflow-x: hidden;
+}
+
+.loop h2 {
+  animation-name: slide-left;
+  animation-duration: 16s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  user-select: none;
+  white-space: nowrap;
+}
