@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import NetricLogo from "./ui/NetricLogo";
+import NetricLogo from "../ui/NetricLogo";
 import { navLinks } from "@/lib/constants";
-import MobileMenu from "./ui/MobileMenu";
+import MobileMenu from "../ui/MobileMenu";
 const Header = () => {
   return (
     <header className="w-full container-max py-[36px] flex justify-between items-center">

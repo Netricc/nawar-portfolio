@@ -14,7 +14,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <div className="loop relative w-full mt-[250px] max-lg:mt-[230px] max-sm:mt-[180px]">
+      <div className="loop relative w-full mt-[250px] max-lg:mt-[140px] max-sm:mt-[80px]">
         <h2
           className={`absolute 
               font-dm-sans text-left left-[100%]

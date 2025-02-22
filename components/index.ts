@@ -1,8 +1,9 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./main/Header";
+import Footer from "./main/Footer";
 import MobileMenu from "./ui/MobileMenu";
-import Intro from "./Intro";
-import SmoothScroll from "./SmoothScroll";
+import Intro from "./main/Intro";
+import SmoothScroll from "./main/SmoothScroll";
+import RootAbout from "./root/about";
 // SVGs
 import DribbbleIcon from "./ui/DribbbleIcon";
 import GithubIcon from "./ui/GithubIcon";
@@ -23,4 +24,5 @@ export {
   Hero,
   Intro,
   SmoothScroll,
+  RootAbout,
 };
