@@ -1,10 +1,11 @@
-import { Hero, RootAbout } from "@/components";
+import { Hero, RootAbout, RootWork } from "@/components";
 
 const Home = () => {
   return (
     <div>
       <Hero />
       <RootAbout />
+      <RootWork />
     </div>
   );
 };

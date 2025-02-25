@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="w-full h-screen  pt-[94px] pb-[118px] max-lg:pt-[78px] max-lg:pb-[326px] max-sm:pt-[80px] max-sm:pb-[176px]">
+    <section className="w-full min-h-screen  pt-[94px] pb-[118px] max-lg:pt-[78px] max-lg:pb-[326px] max-sm:pt-[80px] max-sm:pb-[176px]">
       <div className="container-max w-full">
         <h1 className="font-dm-sans text-secondary text-[58px] max-sm:text-[36px] font-extralight italic">
           Nawar
@@ -14,7 +14,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <div className="loop relative w-full mt-[250px] max-lg:mt-[140px] max-sm:mt-[80px]">
+      <div className="loop relative w-full mt-[250px] max-lg:mt-[80px] max-sm:mt-[70px]">
         <h2
           className={`absolute 
               font-dm-sans text-left left-[100%]

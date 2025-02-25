@@ -1,3 +1,5 @@
+import { asomaWork, hotankWork } from "@/assets/images";
+
 export const navLinks = [
   { title: "About", href: "/about" },
   { title: "Work", href: "/work" },
@@ -35,5 +37,22 @@ export const socialMediaLinks = [
   {
     title: "Linkedin",
     href: "https://www.linkedin.com/in/nawar-alsafadi/",
+  },
+];
+
+export const works = [
+  {
+    title: "Asoma",
+    link: "https://asoma.netlify.app",
+    linkType: "Website",
+    image: asomaWork,
+    role: "Design & Development",
+  },
+  {
+    title: "HoTank",
+    link: "https://nawar-hotank.netlify.app",
+    linkType: "Website",
+    image: hotankWork,
+    role: "Development",
   },
 ];

@@ -4,12 +4,13 @@ import MobileMenu from "./ui/MobileMenu";
 import Intro from "./main/Intro";
 import SmoothScroll from "./main/SmoothScroll";
 import RootAbout from "./root/about";
+import RootWork from "./root/work";
+import WorkCard from "./ui/WorkCard";
 // SVGs
 import DribbbleIcon from "./ui/DribbbleIcon";
 import GithubIcon from "./ui/GithubIcon";
 import LinkdnIcon from "./ui/LinkdnIcon";
 import FreelancerIcon from "./ui/FreelancerIcon";
-
 // Landing Page
 import Hero from "./root/Hero";
 
@@ -25,4 +26,6 @@ export {
   Intro,
   SmoothScroll,
   RootAbout,
+  RootWork,
+  WorkCard,
 };
