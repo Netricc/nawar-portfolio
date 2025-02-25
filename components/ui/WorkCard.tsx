@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { StaticImageData } from "next/image";
 import gsap from "gsap";
 
 interface WorkProps {
@@ -10,7 +11,7 @@ interface WorkProps {
     link: string;
     title: string;
     role: string;
-    image: string;
+    image: StaticImageData;
     linkType: string;
   };
 }
