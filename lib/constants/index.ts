@@ -44,15 +44,22 @@ export const works = [
   {
     title: "Asoma",
     link: "https://asoma.netlify.app",
-    linkType: "Website",
     image: asomaWork,
     role: "Design & Development",
+    category: "Website",
   },
   {
     title: "HoTank",
     link: "https://nawar-hotank.netlify.app",
-    linkType: "Website",
     image: hotankWork,
     role: "Development",
+    category: "Design",
+  },
+  {
+    title: "HoTank",
+    link: "https://nawar-hotank.netlify.app",
+    image: hotankWork,
+    role: "Development",
+    category: "Game",
   },
 ];

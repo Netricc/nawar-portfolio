@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { StaticImageData } from "next/image";
 import gsap from "gsap";
+import { websiteIcon, designIcon, gameIcon } from "@/assets/icons";
 
 interface WorkProps {
   work: {
@@ -12,7 +13,7 @@ interface WorkProps {
     title: string;
     role: string;
     image: StaticImageData;
-    linkType: string;
+    category: "Website" | "Design" | "Game";
   };
 }
 
@@ -91,7 +92,7 @@ const WorkCard: React.FC<WorkProps> = ({ work }) => {
       </Link>
       <div
         ref={imageRef}
-        className="fixed flex justify-center items-center pointer-events-none"
+        className="fixed pointer-events-none"
         style={{
           top: 0,
           left: 0,
@@ -106,8 +107,18 @@ const WorkCard: React.FC<WorkProps> = ({ work }) => {
           src={work.image}
           alt={work.title}
         />
-        <div className="absolute z-30 text-lg font-semibold text-primary">
-          Visit the {work.linkType}
+        <div className="absolute bg-primary top-[10px] left-[10px] z-30 h-[32px] w-[32px] rounded-full flex justify-center items-center font-semibold">
+          <Image
+            src={
+              work.category === "Website"
+                ? websiteIcon
+                : work.category === "Design"
+                ? designIcon
+                : gameIcon
+            }
+            alt={work.category}
+            width={24}
+          ></Image>
         </div>
       </div>
     </>
