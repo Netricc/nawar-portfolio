@@ -72,19 +72,19 @@ const WorkCard = (work: WorkProps) => {
       <Link className="z-0" href={work.link}>
         <article
           ref={cardRef}
-          className="w-full workCard cursor-pointer border-y-2 border-gray py-[68px] px-[46px] flex justify-between items-center relative"
+          className="w-full workCard cursor-pointer border-y-2 border-gray py-[68px] px-[46px] flex justify-between items-center relative max-sm:flex-col max-sm:justify-normal max-sm:gap-[26px]"
         >
           <h4 className="font-medium font-dm-sans text-[32px] text-secondary  uppercase">
             {work.title}
           </h4>
-          <p className="font-medium text-gray text-lg font-inter">
+          <p className="font-medium max-sm:text-center text-gray text-lg font-inter">
             {work.role}
           </p>
         </article>
       </Link>
       <div
         ref={imageRef}
-        className="fixed pointer-events-none"
+        className="fixed max-lg:hidden pointer-events-none"
         style={{
           top: 0,
           left: 0,
@@ -99,7 +99,7 @@ const WorkCard = (work: WorkProps) => {
           src={work.image}
           alt={work.title}
         />
-        <div className="absolute bg-primary top-[10px] left-[10px] z-30 h-[32px] w-[32px] rounded-full flex justify-center items-center font-semibold">
+        <div className="absolute  bg-primary top-[10px] left-[10px] z-30 h-[32px] w-[32px] rounded-full flex justify-center items-center font-semibold">
           <Image
             src={
               work.category === "Website"
