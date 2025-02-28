@@ -5,8 +5,10 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { websiteIcon, designIcon, gameIcon } from "@/assets/icons";
-import { WorkProps } from "@/lib/types/";
-const WorkCard: React.FC<WorkProps> = ({ work }) => {
+
+// ! fix the issus of types of the workCard in all of his files
+
+const WorkCard = (work) => {
   const imageRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLElement>(null);
 
@@ -49,6 +51,8 @@ const WorkCard: React.FC<WorkProps> = ({ work }) => {
           duration: 0.3,
           ease: "power3.out",
         });
+
+        //
 
         window.removeEventListener("mousemove", handleMouseMove);
       };

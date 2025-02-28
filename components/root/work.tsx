@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { works } from "@/lib/constants";
 import { WorkCard } from "@/components/";
+import { WorkProps } from "@/lib/types";
 const work = () => {
   return (
     <section className="w-full min-h-screen py-[148px] max-lg:py-[100px] max-sm:py-[60px] container-max">
@@ -9,7 +10,7 @@ const work = () => {
       </h2>
 
       <div className="flex mt-[56px] flex-col gap-[68px]">
-        {works.slice(0, 3).map((work, workIdx) => {
+        {works.slice(0, 3).map((work: WorkProps, workIdx) => {
           return <WorkCard key={workIdx} work={work} />;
         })}
       </div>
