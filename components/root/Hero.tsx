@@ -14,17 +14,23 @@ const Hero = () => {
         </p>
       </div>
 
-      <div className="loop relative w-full mt-[250px] max-lg:mt-[80px] max-sm:mt-[70px]">
-        <h2
-          className={`absolute 
-              font-dm-sans text-left left-[100%]
-           text-[86px] font-semibold max-sm:text-[65px]`}
-        >
-          I CREATE{" "}
-          <span className="text-primary italic">BEAUTIFUL DESIGNS</span> THAT
-          MAKE YOUR{" "}
-          <span className="text-primary italic">USERS FALL IN LOVE</span>.
-        </h2>
+      <div className="loop-container overflow-hidden whitespace-nowrap mt-[100px] max-lg:mt-[100px] max-sm:mt-[80px]">
+        <div className="loop-content inline-block animate-marquee  mr-[x]">
+          <h2 className="text-[86px] font-semibold max-sm:text-[65px]">
+            I CREATE{" "}
+            <span className="text-primary italic">BEAUTIFUL DESIGNS</span> THAT
+            MAKE YOUR{" "}
+            <span className="text-primary italic">USERS FALL IN LOVE</span>.
+          </h2>
+        </div>
+        <div className="loop-content inline-block animate-marquee">
+          <h2 className="text-[86px] font-semibold max-sm:text-[65px]">
+            I CREATE{" "}
+            <span className="text-primary italic">BEAUTIFUL DESIGNS</span> THAT
+            MAKE YOUR{" "}
+            <span className="text-primary italic">USERS FALL IN LOVE</span>.
+          </h2>
+        </div>
       </div>
     </section>
   );

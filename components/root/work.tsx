@@ -9,18 +9,20 @@ const work = () => {
       </h2>
 
       <div className="flex mt-[56px] flex-col gap-[68px]">
-        {works.slice(0, 4).map((work, workIdx) => {
+        {works.slice(0, 3).map((work, workIdx) => {
           return <WorkCard key={workIdx} work={work} />;
         })}
       </div>
 
-      <div className="w-full flex justify-center">
-        <button className="bg-third border-2 border-secondary mt-[66px] py-[15px] px-[30px] text-lg font-medium font-inter text-secondary rounded-full hover:bg-secondary hover:text-third duration-200">
-          <Link href={"/work"}>
-            All Projects <sup>{works.length}</sup>
-          </Link>
-        </button>
-      </div>
+      {works.length > 3 && (
+        <div className="w-full flex justify-center">
+          <button className="bg-third border-2 border-secondary mt-[66px] py-[15px] px-[30px] text-lg font-medium font-inter text-secondary rounded-full hover:bg-secondary hover:text-third duration-200">
+            <Link href={"/work"}>
+              All Projects <sup>{works.length}</sup>
+            </Link>
+          </button>
+        </div>
+      )}
     </section>
   );
 };
