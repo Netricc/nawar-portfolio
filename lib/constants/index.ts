@@ -44,7 +44,6 @@ import { WorkProps } from "@/lib/types/";
 
 export const works: WorkProps[] = [
   {
-    key: Number,
     title: "Asoma",
     link: "https://asoma.netlify.app",
     image: asomaWork,
@@ -52,7 +51,6 @@ export const works: WorkProps[] = [
     category: "Website",
   },
   {
-    key: Number,
     title: "HoTank",
     link: "https://nawar-hotank.netlify.app",
     image: hotankWork,
