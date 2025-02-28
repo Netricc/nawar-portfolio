@@ -5,10 +5,9 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { websiteIcon, designIcon, gameIcon } from "@/assets/icons";
+import { WorkProps } from "@/lib/types";
 
-// ! fix the issus of types of the workCard in all of his files
-
-const WorkCard = (work) => {
+const WorkCard = (work: WorkProps) => {
   const imageRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLElement>(null);
 

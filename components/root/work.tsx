@@ -10,8 +10,8 @@ const work = () => {
       </h2>
 
       <div className="flex mt-[56px] flex-col gap-[68px]">
-        {works.slice(0, 3).map((work: WorkProps, workIdx) => {
-          return <WorkCard key={workIdx} work={work} />;
+        {works.slice(0, 3).map((workItem: WorkProps, workIdx) => {
+          return <WorkCard key={workIdx} {...workItem} />;
         })}
       </div>
 
