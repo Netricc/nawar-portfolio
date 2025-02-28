@@ -40,7 +40,9 @@ export const socialMediaLinks = [
   },
 ];
 
-export const works = [
+import { WorkProps } from "@/lib/types/";
+
+export const works: WorkProps[] = [
   {
     title: "Asoma",
     link: "https://asoma.netlify.app",
@@ -53,13 +55,6 @@ export const works = [
     link: "https://nawar-hotank.netlify.app",
     image: hotankWork,
     role: "Development",
-    category: "Design",
-  },
-  {
-    title: "HoTank",
-    link: "https://nawar-hotank.netlify.app",
-    image: hotankWork,
-    role: "Development",
-    category: "Game",
+    category: "Website",
   },
 ];

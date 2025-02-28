@@ -3,20 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { StaticImageData } from "next/image";
 import gsap from "gsap";
 import { websiteIcon, designIcon, gameIcon } from "@/assets/icons";
-
-interface WorkProps {
-  work: {
-    link: string;
-    title: string;
-    role: string;
-    image: StaticImageData;
-    category: "Website" | "Design" | "Game";
-  };
-}
-
+import { WorkProps } from "@/lib/types/";
 const WorkCard: React.FC<WorkProps> = ({ work }) => {
   const imageRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLElement>(null);
