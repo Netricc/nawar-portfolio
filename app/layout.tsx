@@ -100,10 +100,11 @@ export default function RootLayout({
             name: "Nawar Alsafadi",
             jobTitle: "Freelance Developer & Designer",
             url: "https://nawar-portfolio.vercel.app",
-            image: "https://nawar-portfolio.vercel.app/path-to-your-image.jpg",
+            image:
+              "https://nawar-portfolio.vercel.app/assets/images/meta-image-nawar-alsafadi-website.jpg",
             sameAs: [
-              "https://linkedin.com/in/yourprofile",
-              "https://github.com/yourusername",
+              "https://linkedin.com/in/nawar-alsafadi",
+              "https://github.com/Netricc",
             ],
             description:
               "Freelance developer specializing in Next.js and modern web design.",
