@@ -92,6 +92,23 @@ export default function RootLayout({
           <main className="">{children}</main>
           <Footer />
         </AppProvider>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Nawar Alsafadi",
+            jobTitle: "Freelance Developer & Designer",
+            url: "https://nawar-portfolio.vercel.app",
+            image: "https://nawar-portfolio.vercel.app/path-to-your-image.jpg",
+            sameAs: [
+              "https://linkedin.com/in/yourprofile",
+              "https://github.com/yourusername",
+            ],
+            description:
+              "Freelance developer specializing in Next.js and modern web design.",
+          })}
+        </script>
       </body>
     </html>
   );
