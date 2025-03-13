@@ -5,7 +5,7 @@ import { socialMediaLinks } from "@/lib/constants/";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary w-full min-h-screen">
+    <footer className="bg-secondary footer w-full min-h-screen">
       <div className="w-full h-full  text-third pt-[80px] max-lg:pt-[34px] relative">
         <div className="container-max w-full">
           <h2 className="text-[68px] max-lg:text-[42px] max-sm:text-[36px] text-third font-semibold font-dm-sans">
